@@ -7,9 +7,21 @@ const BeerImage = styled.img`
 `;
 
 const BeerWrapper = styled.div`
+  display: grid;
   width: 70%;
   margin: 30px;
   height: 1800px;
+  justify-items: center;
+`;
+
+const BeerContent = styled.div`
+  display: flex;
+  align-self: center;
+`;
+
+const BeerName = styled.div`
+  display: flex;
+  align-self: flex-end;
 `;
 
 const Beer = ({ beer }) => {
@@ -21,7 +33,7 @@ const Beer = ({ beer }) => {
 
   return (
     <BeerWrapper onClick={isActiveHandler} key={beer.id}>
-      <div>
+      <BeerContent>
         <div
           style={{
             display: isActive ? "block" : "none",
@@ -36,8 +48,8 @@ const Beer = ({ beer }) => {
           src={beer.image_url}
           alt="beerImage"
         />
-      </div>
-      <div>{beer.name}</div>
+      </BeerContent>
+      <BeerName>{beer.name}</BeerName>
     </BeerWrapper>
   );
 };
