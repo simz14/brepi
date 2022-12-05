@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+import Beer from "./components/Beer";
 import { getBeers } from "./services/beerService";
+
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 45px;
+`;
 
 function App() {
   const [data, setData] = useState([]);
@@ -14,12 +22,13 @@ function App() {
     };
     dataRetrieve();
   }, []);
+
   return (
-    <div>
+    <ContentWrapper>
       {data.map((beer) => (
-        <li>{beer.name}</li>
+        <Beer key={beer.name} beer={beer} />
       ))}
-    </div>
+    </ContentWrapper>
   );
 }
 
