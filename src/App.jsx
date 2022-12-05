@@ -1,5 +1,8 @@
+import { fetchBeers } from "./services/beerService";
+
 function App() {
-  return <h1>Hello</h1>;
+  fetchBeers();
+  return <div>Hello</div>;
 }
 
 export default App;
