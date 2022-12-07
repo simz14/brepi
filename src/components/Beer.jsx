@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const BeerImage = styled.img`
   width: 100%;
-  height: 37em;
+  height: 25em;
 `;
 
 const BeerWrapper = styled.div`
   display: grid;
   width: 70%;
   margin: 30px;
-  height: 1800px;
+  height: 500px;
   justify-items: center;
 `;
 

@@ -6,6 +6,14 @@ const PagesWrapper = styled.ul`
   display: flex;
   list-style-type: none;
   gap: 20px;
+  grid-column: 2/4;
+  justify-content: center;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  grid-column: 2/4;
+  justify-content: center;
 `;
 
 const Pagination = ({ beersPerPage, totalBeers, paginate }) => {
@@ -15,13 +23,13 @@ const Pagination = ({ beersPerPage, totalBeers, paginate }) => {
   }
 
   return (
-    <nav>
+    <Nav>
       <PagesWrapper>
         {pageNumbers.map((number) => {
           return <Page key={number} number={number} paginate={paginate} />;
         })}
       </PagesWrapper>
-    </nav>
+    </Nav>
   );
 };
 

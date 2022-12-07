@@ -7,7 +7,6 @@ import { getBeers } from "./services/beerService";
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  font-size: 45px;
 `;
 
 function App() {
