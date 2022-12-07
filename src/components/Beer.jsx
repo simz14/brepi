@@ -12,6 +12,9 @@ const BeerWrapper = styled.div`
   margin: 30px;
   height: 500px;
   justify-items: center;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 10px;
 `;
 
 const BeerContent = styled.div`

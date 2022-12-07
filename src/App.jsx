@@ -7,12 +7,19 @@ import { getBeers } from "./services/beerService";
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 236, 189, 1) 0%,
+    rgba(250, 193, 0, 1) 100%
+  );
+  font-family: system-ui;
+  font-weight: 600;
 `;
 
 function App() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [beersPerPage, setbeersPerPage] = useState(8);
+  const [beersPerPage, setbeersPerPage] = useState(12);
 
   useEffect(() => {
     const dataRetrieve = async () => {

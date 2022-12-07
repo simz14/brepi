@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
+
+const PageNum = styled.div`
+  cursor: pointer;
+  &&:hover {
+    font-weight: 800;
+  }
+`;
+
 const Page = ({ number, paginate }) => {
   return (
     <li key={number}>
-      <a onClick={() => paginate(number)} href="#">
+      <PageNum
+        onClick={() => {
+          paginate(number);
+        }}
+      >
         {number}
-      </a>
+      </PageNum>
     </li>
   );
 };
